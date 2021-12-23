@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+git config --global user.name "jovyan"
+git config --global user.email "jovyan@mybinder"
+
+# Make temporary directories (these are ignored in .gitignore)
+mkdir big_data output
+
+# Download our large data file(s)
+wget https://osf.io/zw7pt/download -O big_data/rules.yaml
+wget https://osf.io/6e57w/download -O big_data/training.yaml
